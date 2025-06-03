@@ -1,0 +1,54 @@
+Traceback (most recent call last):
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus\browser_decorator.py", line 197, in run_task
+    result = func(driver, data)
+  File "c:\Users\arelf\Desktop\RMAolFiles\ExternalBot\externalbot.py", line 16, in browse_articles
+    link.click()
+    ~~~~~~~~~~^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\driver.py", line 291, in click
+    self._driver._cursor.click(self, skip_move=skip_move)
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_humancursor\web_cursor.py", line 74, in click
+    self.move_to(
+    ~~~~~~~~~~~~^
+        element,
+        ^^^^^^^^
+    ...<3 lines>...
+        steady=steady
+        ^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_humancursor\web_cursor.py", line 40, in move_to
+    if not self.scroll_into_view_of_element(element):
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_humancursor\web_cursor.py", line 248, in scroll_into_view_of_element
+    self.scroll_to_element(element)
+    ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_humancursor\web_cursor.py", line 277, in scroll_to_element
+    is_in_viewport = element.run_js(scrolling_code)
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\driver.py", line 677, in run_js
+    self._elem.raise_if_disconnected()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\element.py", line 730, in raise_if_disconnected
+    response = self.is_disconnected()
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\element.py", line 736, in is_disconnected
+    return self.apply('(el)=>!el.isConnected')
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\element.py", line 594, in apply
+    self._remote_object = self._tab.send(
+                          ~~~~~~~~~~~~~~^
+        cdp.dom.resolve_node(backend_node_id=self.backend_node_id)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 286, in send
+    self.open()
+    ~~~~~~~~~^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 167, in open
+    self.wait_for_socket_connection()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 190, in wait_for_socket_connection
+    self.raise_connection_failure_exception()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 182, in raise_connection_failure_exception
+    raise Exception(self._connection_failure_message)
+Exception: [WinError 10061] No connection could be made because the target machine actively refused it

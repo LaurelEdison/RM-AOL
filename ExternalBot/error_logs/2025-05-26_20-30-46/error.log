@@ -1,0 +1,7 @@
+Traceback (most recent call last):
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus\browser_decorator.py", line 197, in run_task
+    result = func(driver, data)
+  File "c:\Users\arelf\Desktop\RMAolFiles\ExternalBot\externalbot.py", line 20, in browse_articles
+    driver.scroll(random.random(100, 250), smooth_scroll=True, wait=Wait.SHORT)
+                  ~~~~~~~~~~~~~^^^^^^^^^^
+TypeError: Random.random() takes no arguments (2 given)

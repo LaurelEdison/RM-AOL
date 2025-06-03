@@ -83,7 +83,7 @@ async function humanLikeMouseMove(
     }
 
     let mag = estimatedStepSize * (0.4 + Math.random() * 0.2);
-    if (i % 5 === 0 && Math.random() < 0.2) {
+    if (i % 10 === 0 && Math.random() < 0.2) {
       const scaleFactor = randNorm(100.3, 50); // mean, sd
       mag *= Math.max(5, Math.min(scaleFactor, 200)); // cap at 35
     }
@@ -280,7 +280,7 @@ async function browseArticles() {
       depthSd = 200;
     const totalDepth = Math.max(0, randNorm(depthMean, depthSd));
     const avgBy = totalDepth / targetScrolls;
-    const scrollSpeed = randNorm(1800, 300);  
+    const scrollSpeed = Math.max(400, Math.round(randNorm(1000, 200)));
 
     // read time
     const scrollTask = (async () => {

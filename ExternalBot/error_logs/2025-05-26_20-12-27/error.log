@@ -1,0 +1,20 @@
+Traceback (most recent call last):
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus\browser_decorator.py", line 197, in run_task
+    result = func(driver, data)
+  File "c:\Users\arelf\Desktop\RMAolFiles\ExternalBot\externalbot.py", line 21, in browse_articles
+    driver.get(href)                        # humanMove internally if needed
+    ~~~~~~~~~~^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\driver.py", line 2170, in get
+    self._tab = self._browser.get(link, )
+                ~~~~~~~~~~~~~~~~~^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\browser.py", line 310, in get
+    frame_id, _, *_ = connection.send(cdp.page.navigate(url, referrer=referrer))
+                      ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 290, in send
+    return self.perform_send(cdp_obj, _is_update, wait_for_response)
+           ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 311, in perform_send
+    result = parse_response(result, cdp_obj)
+  File "C:\Users\arelf\AppData\Local\Programs\Python\Python313\Lib\site-packages\botasaurus_driver\core\connection.py", line 50, in parse_response
+    raise ChromeException(response["error"])
+botasaurus_driver.exceptions.ChromeException: Cannot navigate to invalid URL [code: -32000]

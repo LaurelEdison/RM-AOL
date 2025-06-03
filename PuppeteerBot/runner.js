@@ -1,7 +1,7 @@
 const { fork } = require('child_process');
 
-const numBots = 10;
-const numRuns = 10;
+const numBots = 20;
+const numRuns = 20;
 
 async function runBatch() {
   for (let n = 0; n < numRuns; n++) {
